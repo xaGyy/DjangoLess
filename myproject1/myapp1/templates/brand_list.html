@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+    {% for brand in brands %}
+    <li style="color: red">
+        {{brand.name}}
+        {{brand.country}}
+    </li>
+    {% endfor %}
+</ul>
+<!--{{cars.0.brand}}-->
+{% endblock %}
