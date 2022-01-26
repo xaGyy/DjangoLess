@@ -27,11 +27,5 @@ class Vehicle(models.Model):
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE, related_name="get_vehicles")
 
     def __str__(self):
-        return f'{self.title, self.year}'
+        return f'{self.title, self.year, self.color, self.type}'
 
-class BrandFr(models.Model):
-    brand_name = models.CharField(max_length=200)
-    date_crate = models.CharField(max_length=200)
-
-    def __str__(self):
-        return f'{self.brand_name, self.date_crate}'
